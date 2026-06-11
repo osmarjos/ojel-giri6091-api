@@ -6,6 +6,7 @@ import { Controller, Get, Inject, Injectable } from "@nestjs/common";
 
 @Injectable()
 export class TaskRepositoryImpl implements ITaskRepository {
+
     private tasks: Task[] = [];
     
     async create(task: Task): Promise<Task> {
@@ -18,7 +19,12 @@ export class TaskRepositoryImpl implements ITaskRepository {
         return this.tasks.find( t => t.id == id) || null;
     }
 
-
+    update(task: Task): Promise<Task> {
+        throw new Error("Method not implemented.");
+    }
+    delete(id: string): Promise<boolean> {
+        throw new Error("Method not implemented.");
+    }
 }
 
 @Controller()
@@ -38,3 +44,7 @@ export class TaskController{
 }
 
 //! npm i --save class-validator class-trasformer
+
+// git add .
+// git commit -m "add: Configuracion de los casos de uso para tareas"
+// git push
