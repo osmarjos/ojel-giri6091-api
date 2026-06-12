@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 
-import { TaskModule } from './tasks/infraestructure/tasks.module';
+import { TasksModule } from './tasks/infraestructure/tasks.module';
 
 @Module({
   imports: [
-    TaskModule
+    TasksModule
   ],
 
 })
