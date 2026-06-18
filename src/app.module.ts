@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 
 import { TasksModule } from './tasks/infraestructure/tasks.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [
+    PrismaModule,
     TasksModule
   ],
 
