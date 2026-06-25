@@ -14,7 +14,7 @@ export class UpdateTaskUseCase {
     ) {}
 
     async execute(
-        id: string,
+        id: number,
         updateData: Partial<Pick<Task, 'title' | 'description' | 'status'>>): Promise<Task> {
 
         const task = await this.getTaskByIdUseCase.execute(id);
