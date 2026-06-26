@@ -22,9 +22,6 @@ export class UpdateTaskUseCase {
         if (updateData.title != undefined) task.title = updateData.title;
         if (updateData.description != undefined) task.description = updateData.description;
         if (updateData.status != undefined) {
-            if (updateData.status === 'COMPLETED')
-                task.complete();
-            else
                 task.status = updateData.status;
 
         }

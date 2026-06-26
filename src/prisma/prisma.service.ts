@@ -8,8 +8,7 @@ dotenv.config();
 
 @Injectable()
 export class PrismaService extends PrismaClient implements  OnModuleInit, OnModuleDestroy{
-    task: any;
-
+   
 
 
     constructor() {
